@@ -1,0 +1,42 @@
+RewriteEngine On
+
+# Rediriger /roll vers youtube.com
+RewriteCond %{REQUEST_URI} ^/roll/?$
+RewriteRule ^roll/?$ https://youtu.be/dQw4w9WgXcQ?si=mv2Rr4wxEsdLt7ZS [R=301,L]
+
+# Si la requête est pour la racine (floblok.com), redirige vers /public/index.php
+RewriteCond %{REQUEST_URI} ^/?$
+RewriteRule ^$ /public/index.php [L]
+
+# Exclure les fichiers statiques de la réécriture
+RewriteCond %{REQUEST_URI} !\.(css|js|png|jpg|jpeg|gif|svg|ico|json)$
+
+# Si la requête est exactement /admin, redirige vers admin/admin.php
+RewriteCond %{REQUEST_URI} ^/admin/?$
+RewriteRule ^admin/?$ /admin/admin.php [L]
+
+# Autoriser l'accès direct à tous les fichiers dans /admin/
+RewriteCond %{REQUEST_URI} ^/admin/.*\.php$
+RewriteRule ^admin/.*\.php$ - [L]
+
+# Rediriger tout le reste vers /public/
+RewriteCond %{REQUEST_URI} ^/assets/
+RewriteRule ^assets/.*$ - [L]
+
+RewriteCond %{REQUEST_URI} ^/routes/
+RewriteRule ^routes/.*$ - [L]
+
+# ✅ Ne pas rediriger les appels à /api/
+RewriteCond %{REQUEST_URI} ^/api/
+RewriteRule .* - [L]
+
+RewriteCond %{REQUEST_URI} !^/public/
+RewriteRule ^(.*)$ /public/$1 [L]
+
+# Bloquer les fichiers sensibles
+<FilesMatch "\.(json|env|lock|gitignore|htaccess|ini|log)$">
+  Require all denied
+</FilesMatch>
+
+# Forcer UTF-8
+AddDefaultCharset UTF-8

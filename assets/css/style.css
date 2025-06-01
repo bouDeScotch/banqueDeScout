@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Margarine&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Istok+Web:wght@700&display=swap');
+
+nav {
+    display: flex;
+    background-color: #6B336A;
+    justify-content: space-between;
+    padding: 5vh 5vw;
+    
+    color: white;
+    font-size: 2em;
+
+    border-radius: 0 0 20px 20px;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+#navLogo {
+    font-family: "Istok Web", sans-serif;
+    font-weight: 700;
+    font-style: normal; 
+}
+
+#logInButton {
+    padding: 10px 20px;
+    border: white 1px solid;
+}
+
+body {
+    margin: 0;
+    font-family: "Margarine", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
+#heroImg {
+    background-image: url("/assets/hero.png");
+    background-size: cover;
+    width: 100%;
+    height: 30vh;
+    background-position: center;
+    background-repeat: no-repeat;
+    
+    box-shadow: 0 32px 67px 11px hwb(301 20% 58% / 0.325);
+}
+
+h1 {
+    text-align: center;
+}
+
+#texts {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: stretch;
+    text-align: center;
+    margin-top: 5vh;
+}
+
+#texts .text {
+    font-size: 2em;
+    margin-top: 5vh;
+    text-align: center;
+}
+
+.CTA {
+    background-color: #6B336A;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 3em;
+    color: white;
+    margin: 10vh auto;
+}
+
+.login-form {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.login-form input {
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #6B336A;
+    padding-left: 20px;
+    font-size: 1.5em;
+    margin-right: 10px;
+}
+
+.login-form button {
+    background-color: #6B336A;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+}
+
+.mainData {
+    display: flex;
+    flex-direction: column;
+    align-items: right;
+    justify-content: right;
+    margin-top: 5vh;
+}
+
+.mainData .line {
+    display: flex;
+    flex-direction: row;
+}
+
+.mainData .line div {
+    font-size: 2em;
+    margin: 0 10px;
+}
+
+.actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.actions .action {
+    background-color: #6B336A;
+    border-radius: 20px;
+    width: fit-content;
+    padding: 10px 20px;
+    font-size: 3em;
+    color: white;
+    margin: 5vh auto;
+}
+
+li {
+    list-style: none;
+    font-size: 2em;
+    margin: 2vh 0;
+}
+
+li:hover {
+    color: #6B336A;
+    cursor: pointer;
+}
+
+.idNames {
+    display: flex;
+    flex-direction: column;
+    align-items: left   ;
+    justify-content: left;
+    margin-top: 5vh;
+    margin-left: 5vw;
+}
+
+.virement-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 5vh;
+}
+
+.virement-form input {
+    width: 300px;
+    height: 50px;
+    border-radius: 20px;
+    border: 3px solid #6B336A;
+    padding-left: 20px;
+    font-size: 1.5em;
+    margin-right: 10px;
+    margin-top: 5vh;
+}
+
+.virement-form button {
+    background-color: #6B336A;
+    color: white;
+    font-size: 1.5em;
+    border: none;
+    cursor: pointer;
+    transition: all 0.3s ease-in-out;
+    border-radius: 10px;
+    padding: 10px;
+    width: 400px;
+    margin-top: 8vh;
+}
+
+.virement-form button:hover {
+    background-color: #5A2B5A;
+    transform: scale(1.05);
+}
+
+#bottomLeftBonhomme {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100px;
+    height: 100px;
+    background-image: url("/assets/../assets/icon.png");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+ul li a {
+    color: black;
+}
+
+p {text-align: center;}
